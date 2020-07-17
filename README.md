@@ -1,1 +1,1 @@
-# globspotters-site
+# globespotters-site
