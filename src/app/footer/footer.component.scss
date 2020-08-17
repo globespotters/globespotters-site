@@ -1,0 +1,28 @@
+$footer-item-padding: 0.5em;
+
+.horizontal-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+
+  li {
+    display: inline-block;
+    padding: $footer-item-padding;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      font-weight: bolder;
+    }
+  }
+}
+
+#logo-text {
+  padding: $footer-item-padding;
+  display: inline-block;
+}
+
