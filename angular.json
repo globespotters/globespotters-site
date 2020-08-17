@@ -31,6 +31,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -95,6 +97,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -126,6 +130,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "globespotters-site"
+    }
+  },
+  "defaultProject": "globespotters-site",
+  "cli": {
+    "analytics": "8f74e2a6-8c97-4089-9a2e-828597e0e17c"
+  }
 }
