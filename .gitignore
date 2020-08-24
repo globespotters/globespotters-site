@@ -37,7 +37,8 @@ speed-measure-plugin*.json
 .history/*
 
 # misc
-/.sass-cache
+**/.sass-cache
+*.scssc
 /connect.lock
 /coverage
 /libpeerconnection.log
