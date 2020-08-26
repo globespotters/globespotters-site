@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 
+// App Modules
+import { CoreModule } from './core/core.module';
+import { MapModule } from './map/map.module';
+import { StaticPagesModule } from './static-pages/static-pages.module';
 
 @NgModule({
   declarations: [
@@ -13,11 +17,14 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
+    CoreModule,
+    MapModule,
+    StaticPagesModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}
