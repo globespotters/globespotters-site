@@ -49,7 +49,7 @@ testem.log
 **/.sass-cache
 *.scssc
 *.css
-*.map
+*.css.map
 
 # System Files
 .DS_Store
