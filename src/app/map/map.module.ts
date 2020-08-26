@@ -10,6 +10,7 @@ import { TutorialComponent } from './tutorial/tutorial.component';
   declarations: [MapComponent, TimelineComponent, TutorialComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [MapComponent, TimelineComponent, TutorialComponent]
 })
 export class MapModule { }
