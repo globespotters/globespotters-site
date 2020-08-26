@@ -14,9 +14,11 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "async-mutex": "^0.2.4",
     "@google-cloud/language": "^4.1.0",
     "firebase-admin": "^8.10.0",
-    "firebase-functions": "^3.6.1"
+    "firebase-functions": "^3.6.1",
+    "got": "^11.5.2"
   },
   "devDependencies": {
     "tslint": "^5.12.0",
