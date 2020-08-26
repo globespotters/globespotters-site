@@ -1,16 +1,5 @@
 @use '../variables';
 
-$footer-color: grey;
-
-app-footer {
-  position: absolute;
-  background-color: $footer-color;
-  width: 100%;
-  height: variables.$footer-height;
-  margin: 0;
-  padding: 0;
-}
-
 #main {
   height: calc(100vh - #{variables.$footer-height});
   width: 100%;
