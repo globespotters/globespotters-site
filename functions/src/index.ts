@@ -1,5 +1,5 @@
 //import * as functions from 'firebase-functions';
-import { getLocationFromArticle } from './wikiLocation';
+import { getLocationFromArticle, getLocationsFromArticleList } from './wikiLocation';
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
@@ -10,5 +10,9 @@ import { getLocationFromArticle } from './wikiLocation';
 // });
 
 getLocationFromArticle("Ottawa").then((coordinates) => {
+  console.log(coordinates);
+});
+
+getLocationsFromArticleList(["Ottawa", "Toronto", "Hearst, Ontario", "Poutine"]).then((coordinates) => {
   console.log(coordinates);
 });
