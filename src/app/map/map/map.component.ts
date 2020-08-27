@@ -26,6 +26,14 @@ export class MapComponent implements OnInit {
     });
 
     this.map.addControl(new mapboxgl.NavigationControl());
+
+    let marker = new mapboxgl.Marker({color : '#FA8072', draggable: true})
+      .setLngLat([this.lng, this.lat])
+      .addTo(this.map);
+
+    // Marker on-click functionality
+    marker.getElement().addEventListener('click', () => this.showTimelineService.toggleTimeline());
+
   }
 
 }
