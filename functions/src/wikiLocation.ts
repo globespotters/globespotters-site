@@ -81,3 +81,55 @@ export async function getLocationsFromArticleList(articleName: string[] ) {
 
   return coordinates;
 }
+
+/**
+ * This class makes it easy to group asynchronous requests to the Wikipedia API together.
+ *
+ * Using it is pretty simple. A piece of code calls the getLocationFromArticle function of this class, and the function returns a Promise.
+ * The thing that is different here is that the call to the API will not be made straight away. It will instead wait that a certain number of
+ * calls (5 by default) to getLocationFromArticle have been made. Once that number of calls has been made, the requests are grouped together
+ * and than sent. Once the response arrives, it is used to resolve each pending Promise. All of this happens automatically in the background.
+ *
+ * **IMPORTANT**: Once you know you'll no longer have any requests that you'll make, please call the flushRequests function. This function
+ * sends the remaining pending requests, no matter how many are left.
+ */
+export class GroupedLocationGetter {
+  private readonly groupNumber: number;
+
+  // This function holds an array of objects containing the article name and the function to resolve the pending promise associated with
+  // that request
+  private pendingRequests = new Array<{articleName: string, resolve: (value: Coordinates|null) => void}>();
+
+  /**
+   * @param groupNumber Number of requests to group together when making calls to the Wikipedia API
+   */
+  constructor(groupNumber: number = 5) {
+    this.groupNumber = groupNumber;
+  }
+
+  async getLocationFromArticle(articleName: string) {
+    return new Promise<Coordinates|null>(((resolve, reject) => {
+      this.pendingRequests.push({ articleName, resolve });
+
+      if (this.pendingRequests.length >= this.groupNumber) {
+        this.flushRequests();
+      }
+    }));
+  }
+
+  flushRequests() {
+    // Save the pending requests that we will complete
+    const requests = [...this.pendingRequests];
+
+    // Remove these requests from the pending ones
+    this.pendingRequests = []
+
+    const articleNames = requests.map((i) => i.articleName);
+
+    getLocationsFromArticleList(articleNames).then((results) => {
+      for (const request of requests) {
+        request.resolve(<Coordinates|null>results.get(request.articleName));
+      }
+    });
+  }
+}
