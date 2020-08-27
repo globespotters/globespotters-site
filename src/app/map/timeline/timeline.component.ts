@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ShowTimelineService} from "../../core/show-timeline.service";
 
 @Component({
   selector: 'app-timeline',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
-  constructor() { }
+  constructor(public showTimelineService: ShowTimelineService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

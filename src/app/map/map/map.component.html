@@ -1,7 +1,7 @@
 <div id="container">
   <div class="map" id="map"></div>
-  <button type="button" class="btn btn-primary" (click)="showTimeline = !showTimeline" id="timeline-toggle-btn">
+  <button type="button" class="btn btn-primary" (click)="showTimelineService.toggleTimeline()" id="timeline-toggle-btn">
     Toggle Timeline
   </button>
 </div>
-<app-timeline *ngIf="showTimeline"></app-timeline>
+<app-timeline></app-timeline>

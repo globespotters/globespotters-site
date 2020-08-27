@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from "../../../environments/environment";
 import * as mapboxgl from 'mapbox-gl';
+import { ShowTimelineService } from "../../core/show-timeline.service";
 
 @Component({
   selector: 'app-map',
@@ -9,12 +10,12 @@ import * as mapboxgl from 'mapbox-gl';
 })
 export class MapComponent implements OnInit {
   public showTimeline = false;
-  public map: mapboxgl.Map;
+  public map: mapboxgl.Map | undefined;
   style = 'mapbox://styles/mapbox/streets-v11';
   lat = 37.75;
   lng = -122.41;
 
-  constructor() { }
+  constructor(public showTimelineService: ShowTimelineService) { }
 
   ngOnInit(): void {
     this.map = new mapboxgl.Map({
