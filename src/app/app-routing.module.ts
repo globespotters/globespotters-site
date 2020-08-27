@@ -13,6 +13,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'terms-of-service', component: TermsOfServiceComponent },
+  { path: '', pathMatch: 'full', redirectTo: '/map' },
+  { path: '**', redirectTo: '/map' }
 ];
 
 @NgModule({

@@ -1,1 +1,6 @@
-<p>map works!</p>
+<div id="map">
+  <button type="button" class="btn btn-primary" (click)="showTimeline = !showTimeline" style="float:right">
+    Toggle Timeline
+  </button>
+</div>
+<app-timeline *ngIf="showTimeline"></app-timeline>

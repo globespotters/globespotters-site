@@ -1,0 +1,40 @@
+@use '../../variables';
+
+$footer-item-padding: 0.5em;
+$footer-color: grey;
+
+footer {
+  position: relative;
+  background-color: $footer-color;
+  width: 100%;
+  height: variables.$footer-height;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+
+  li {
+    display: inline-block;
+    padding: $footer-item-padding;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      font-weight: bolder;
+    }
+  }
+}
+
+#logo-text {
+  padding: $footer-item-padding;
+  display: inline-block;
+}
+

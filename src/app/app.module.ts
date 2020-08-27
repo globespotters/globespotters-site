@@ -1,9 +1,11 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
+
 // App Modules
 import { CoreModule } from './core/core.module';
 import { MapModule } from './map/map.module';
@@ -22,7 +24,8 @@ import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-servi
     FaqComponent,
     ContactComponent,
     PrivacyPolicyComponent,
-    TermsOfServiceComponent
+    TermsOfServiceComponent,
+    FooterComponent
   ],
   imports: [
     CoreModule,

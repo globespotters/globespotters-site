@@ -1,0 +1,12 @@
+@use '../../../variables';
+
+#timeline {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: calc(100vh - #{variables.$footer-height});
+  background-color: #0b2e13;
+  color: white;
+  padding: 2em;
+}
