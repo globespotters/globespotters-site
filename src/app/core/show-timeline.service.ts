@@ -13,6 +13,5 @@ export class ShowTimelineService {
    */
   toggleTimeline() {
     this.timeline_translate = this.timeline_translate === 'translateX(0%)' ? 'translateX(-100%)' : 'translateX(0%)';
-    return this.timeline_translate
   }
 }
