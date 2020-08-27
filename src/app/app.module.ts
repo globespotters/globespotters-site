@@ -11,10 +11,15 @@ import { CoreModule } from './core/core.module';
 import { MapModule } from './map/map.module';
 import { StaticPagesModule } from './static-pages/static-pages.module';
 
+// Pages
+import {ErrorComponent} from './pages/error/error.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    ErrorComponent
   ],
   imports: [
     CoreModule,
