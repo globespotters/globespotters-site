@@ -6,7 +6,8 @@ import { FaqComponent } from './static-pages/faq/faq.component';
 import { ContactComponent } from './static-pages/contact/contact.component';
 import { PrivacyPolicyComponent } from './static-pages/privacy-policy/privacy-policy.component';
 import { TermsOfServiceComponent } from './static-pages/terms-of-service/terms-of-service.component';
-import {ErrorComponent} from './pages/error/error.component';
+import { ErrorComponent } from './pages/error/error.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'terms-of-service', component: TermsOfServiceComponent },
   { path: '', pathMatch: 'full', redirectTo: '/map' },
   { path: '**', redirectTo: '/map' },
-  { path: 'error', component: ErrorComponent}
+  { path: 'error', component: ErrorComponent},
+  { path: 'page-not-found', component: PageNotFoundComponent}
 ];
 
 @NgModule({

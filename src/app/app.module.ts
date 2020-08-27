@@ -12,14 +12,16 @@ import { MapModule } from './map/map.module';
 import { StaticPagesModule } from './static-pages/static-pages.module';
 
 // Pages
-import {ErrorComponent} from './pages/error/error.component';
+import { ErrorComponent } from './pages/error/error.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ErrorComponent
+    ErrorComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CoreModule,
