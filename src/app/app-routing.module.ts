@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // Pages
-import { AboutComponent } from './pages/about/about.component';
-import { FaqComponent } from './pages/faq/faq.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { TermsOfServiceComponent } from './pages/terms-of-service/terms-of-service.component';
+import { AboutComponent } from './static-pages/about/about.component';
+import { FaqComponent } from './static-pages/faq/faq.component';
+import { ContactComponent } from './static-pages/contact/contact.component';
+import { PrivacyPolicyComponent } from './static-pages/privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from './static-pages/terms-of-service/terms-of-service.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
