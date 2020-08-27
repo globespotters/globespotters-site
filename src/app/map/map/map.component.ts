@@ -9,7 +9,6 @@ import { ShowTimelineService } from "../../core/show-timeline.service";
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  public showTimeline = false;
   public map: mapboxgl.Map | undefined;
   style = 'mapbox://styles/mapbox/streets-v11';
   lat = 37.75;
