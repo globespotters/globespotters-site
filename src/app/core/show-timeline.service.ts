@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ShowTimelineService {
-  public timeline_translate: string = 'translateX(0%)';
+  public timeline_translate: string = 'translateX(-100%)';
 
   constructor() { }
 
