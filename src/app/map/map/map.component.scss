@@ -1,7 +1,19 @@
 @use '../../../variables';
 
-#map {
+#container {
   height: calc(100vh - #{variables.$footer-height});
   width: 100%;
-  border: 10px solid green;
+  border: 2px dashed green;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#timeline-toggle-btn {
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+  bottom: 6em;
 }
