@@ -1,3 +1,6 @@
 <div class="card shadow" id="timeline" [ngStyle]="{'transform': showTimelineService.timeline_translate}">
-  Hello
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="timeline-close-btn"
+          (click)="showTimelineService.toggleTimeline()">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
