@@ -1,4 +1,13 @@
 <div id="container">
+  <div class="btn-group btn-group-toggle" data-toggle="buttons" id="light-dark-toggle-btns">
+    <label class="btn btn-secondary active">
+      <input type="radio" name="options" id="light-mode-btn" checked (click)="this.map.setStyle(this.STYLE_LIGHT)">
+      Light
+    </label>
+    <label class="btn btn-secondary">
+      <input type="radio" name="options" id="dark-mode-btn" (click)="this.map.setStyle(this.STYLE_DARK)"> Dark
+    </label>
+  </div>
   <div class="map" id="map"></div>
 </div>
 <app-timeline></app-timeline>

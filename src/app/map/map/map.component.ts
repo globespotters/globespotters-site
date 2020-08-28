@@ -10,9 +10,10 @@ import { ShowTimelineService } from "../../core/show-timeline.service";
 })
 export class MapComponent implements OnInit {
   public map: mapboxgl.Map | undefined;
-  style = 'mapbox://styles/mapbox/streets-v11';
   private lat = 37.75;
   private lng = -122.41;
+  private STYLE_LIGHT: string = 'mapbox://styles/guyinfridge/ckee54njf0kqu19mna1jgz8z1';
+  private STYLE_DARK: string = 'mapbox://styles/guyinfridge/ckedd8l2n1n4c19mlyapazlqu';
 
   constructor(public showTimelineService: ShowTimelineService) { }
 
@@ -20,7 +21,7 @@ export class MapComponent implements OnInit {
     this.map = new mapboxgl.Map({
       accessToken: environment.mapbox.accessToken,
       container: 'map',
-      style: this.style,
+      style: this.STYLE_LIGHT,
       zoom: 13,
       center: [this.lng, this.lat]
     });
