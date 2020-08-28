@@ -1,15 +1,15 @@
 @use '../../variables';
 
 $footer-item-padding: 0.5em;
-$footer-color: grey;
 
 footer {
   position: relative;
-  background-color: $footer-color;
+  background-color: variables.$accent-darker;
   width: 100%;
   height: variables.$footer-height;
   margin: 0;
   padding: 0;
+  color: variables.$accent-white;
 }
 
 .horizontal-menu {
@@ -23,8 +23,8 @@ footer {
     padding: $footer-item-padding;
 
     a {
-      color: white;
       text-decoration: none;
+      color: variables.$accent-white;
     }
 
     a:hover {
