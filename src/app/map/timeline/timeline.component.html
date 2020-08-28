@@ -3,4 +3,6 @@
           (click)="timelineService.toggleTimeline()">
     <span aria-hidden="true">&times;</span>
   </button>
+  <p id="marker_location_text">Your marker has been placed at: {{this.timelineService.getMarkerLngLat().lng}},
+    {{this.timelineService.getMarkerLngLat().lat}}.</p>
 </div>
