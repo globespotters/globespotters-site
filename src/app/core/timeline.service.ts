@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { initial_LngLat } from "../map/map/map.component";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ShowTimelineService {
+export class TimelineService {
   public timeline_translate: string = 'translateX(-100%)';
 
   constructor() { }
