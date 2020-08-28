@@ -10,8 +10,7 @@ import { ShowTimelineService } from "../../core/show-timeline.service";
 })
 export class MapComponent implements OnInit {
   public map: mapboxgl.Map | undefined;
-  private lat = 37.75;
-  private lng = -122.41;
+  private initial_coords = new mapboxgl.LngLat(-123.9749, 40.7736);
   private STYLE_LIGHT: string = 'mapbox://styles/guyinfridge/ckee54njf0kqu19mna1jgz8z1';
   private STYLE_DARK: string = 'mapbox://styles/guyinfridge/ckedd8l2n1n4c19mlyapazlqu';
 
@@ -23,17 +22,19 @@ export class MapComponent implements OnInit {
       container: 'map',
       style: this.STYLE_LIGHT,
       zoom: 13,
-      center: [this.lng, this.lat]
+      center: [this.initial_coords.lng, this.initial_coords.lat]
     });
 
     this.map.addControl(new mapboxgl.NavigationControl());
 
     let marker = new mapboxgl.Marker({color : '#FA8072', draggable: true})
-      .setLngLat([this.lng, this.lat])
+      .setLngLat([this.initial_coords.lng, this.initial_coords.lat])
       .addTo(this.map);
 
     // Marker on-click functionality
-    marker.getElement().addEventListener('click', () => this.showTimelineService.toggleTimeline());
+    marker.getElement().addEventListener('click', () => {
+      this.showTimelineService.toggleTimeline()
+    });
 
   }
 
