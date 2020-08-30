@@ -5,4 +5,11 @@
   </button>
   <p id="marker_location_text">Your marker has been placed at: {{this.timelineService.getMarkerLngLat().lng}},
     {{this.timelineService.getMarkerLngLat().lat}}.</p>
+  <div id="articles">
+    <ul>
+      <li *ngFor="let article of articles">
+        {{article.title}}
+      </li>
+    </ul>
+  </div>
 </div>
