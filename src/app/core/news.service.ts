@@ -9,15 +9,16 @@ import { Observable } from 'rxjs';
 })
 export class NewsService {
   private handleError(error: any): Observable<never> {
-      console.error('server error:', error);
-      if (error.error instanceof Error) {
-        const errMessage = error.error.message;
-        return Observable.throw(errMessage);
-      }
-      return Observable.throw(error || 'Server error');
+    console.error('server error:', error);
+    if (error.error instanceof Error) {
+      const errMessage = error.error.message;
+      return Observable.throw(errMessage);
+    }
+    return Observable.throw(error || 'Server error');
   }
 
   constructor(private http: HttpClient) { }
+
   getArticles(): Observable<NewsArticle[]> {
     return this.http.get<NewsArticle[]>('assets/dummy-article-data.json')
       .pipe(catchError(this.handleError)

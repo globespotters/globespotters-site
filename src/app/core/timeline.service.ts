@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { initial_LngLat } from "../map/map/map.component";
-import { LngLat } from "mapbox-gl";
+import { initial_LngLat } from '../map/map/map.component';
+import { LngLat } from 'mapbox-gl';
 
 @Injectable({
   providedIn: 'root'
