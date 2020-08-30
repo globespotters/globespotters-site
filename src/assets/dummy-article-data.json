@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Hurricane Laura Carves Destructive Path Across Louisiana",
+    "summary": "Although the storm surge was less than projected, Laura was responsible for at least six deaths and extensive property damage.",
+    "publisher": "The NY Times",
+    "url": "https://www.nytimes.com/2020/08/27/us/hurricane-laura-damage.html",
+    "thumbnail": "https://static01.nyt.com/images/2020/08/27/us/27hurricane-1/merlin_176246829_e7281277-42d7-4a7a-aab2-842e190700e4-superJumbo.jpg?quality=90&auto=webp"
+  },
+  {
+    "title": "8 Nebraska Huskers football players sue the Big Ten",
+    "summary": "Eight players from the University of Nebraska football team are suing the Big Ten Conference, requesting an order to invalidate the Big Ten's decision to not play football this fall",
+    "publisher": "CNN",
+    "url": "https://www.cnn.com/2020/08/27/us/nebraska-huskers-football-players-sue-big-ten-spt-trnd/index.html",
+    "thumbnail": "https://cdn.cnn.com/cnnnext/dam/assets/200811152021-01-big-10-football-logo-file-exlarge-169.jpg"
+  },
+  {
+    "title": "US alleges Russian armoured car rammed American vehicle, injuring soldiers",
+    "summary": "White House said alleged move was ‘unprofessional’ when patrols from two countries’ militaries confronted each other in Syria",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/us-news/2020/aug/26/us-russia-armoured-car-injuries-soldiers-syria",
+    "thumbnail": "https://i.guim.co.uk/img/media/1069733e1d42a98e45355f355441638f4cba402e/0_251_5250_3150/master/5250.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=e6f6aeca665117d37e39e9c8d6fe7786"
+  },
+  {
+    "title": "Jacob Blake: Donald Trump to visit Kenosha amid unrest",
+    "summary": "US President Donald Trump is to visit the city in Wisconsin which has seen widespread unrest since a black man was shot in the back and seriously injured by a policeman.",
+    "publisher": "BBC",
+    "url": "https://www.bbc.com/news/world-us-canada-53962653",
+    "thumbnail": "https://ichef.bbci.co.uk/news/660/cpsprodpb/99C7/production/_114176393_mediaitem114176392.jpg"
+  },
+  {
+    "title": "Biden, Trump tussle over whose America is dangerous",
+    "summary": "\"Ask yourself: Do you feel safe in Trump’s America?\" Biden says in a new video.",
+    "publisher": "ABC News",
+    "url": "https://abcnews.go.com/Politics/biden-trump-tussle-america-dangerous/story?id=72700925&cid=clicksource_4380645_1_heads_hero_live_hero_related",
+    "thumbnail": "https://s.abcnews.com/images/Politics/trump-rnc-ap-rc-200829_hpEmbed_3x2_992.jpg"
+  }
+]
