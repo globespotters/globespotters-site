@@ -4,6 +4,7 @@ import { MapComponent } from './map/map.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { MapRoutingModule } from './map-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MapRoutingModule } from './map-routing.module';
     TutorialComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [ MapRoutingModule ]
 })
