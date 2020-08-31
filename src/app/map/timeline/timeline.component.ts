@@ -19,7 +19,7 @@ export class TimelineComponent implements OnInit {
         this.articles = articles;
       },
       error => {
-        console.log('Uh-oh' + error);
+        console.log('Uh-oh: ' + error);
       }
     );
   }

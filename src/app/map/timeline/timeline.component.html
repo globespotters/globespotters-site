@@ -1,15 +1,24 @@
 <div class="card shadow" id="timeline" [ngStyle]="{'transform': timelineService.timeline_translate}">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="timeline-close-btn"
-          (click)="timelineService.toggleTimeline()">
-    <span aria-hidden="true">&times;</span>
-  </button>
-  <p id="marker_location_text">Your marker has been placed at: {{this.timelineService.getMarkerLngLat().lng}},
-    {{this.timelineService.getMarkerLngLat().lat}}.</p>
-  <div id="articles">
-    <ul>
-      <li *ngFor="let article of articles">
-        {{article.title}}
-      </li>
-    </ul>
+  <div>
+    <h1 id="location-name"> Location Placeholder </h1>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="timeline-close-btn"
+            (click)="timelineService.toggleTimeline()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div *ngFor="let article of articles">
+    <a href="{{article.url}}">
+      <div id="article-container">
+        <img id="article-thumbnail" src="{{article.thumbnail}}" alt="{{article.title}}">
+        <div id="article-title"><strong>{{article.title}}</strong><br>
+          <div id="article-summary" class="noHover">
+            {{article.summary}}<br>
+          </div>
+          <div id="article-publishing-info">
+            <strong>{{article.publisher}}</strong> | [insert time] ago
+          </div>
+        </div>
+      </div>
+    </a>
   </div>
 </div>

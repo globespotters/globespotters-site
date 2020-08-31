@@ -4,24 +4,62 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 40%;
+  width: 50%;
   height: calc(100vh - #{variables.$footer-height});
-  background-color: #0b2e13;
+  background-color: variables.$accent-white;
   color: white;
-  padding: 2em;
+  padding: 1em;
   transition: transform 0.3s ease-in-out;
+  overflow: auto;
 }
 
 #timeline-close-btn {
-  color: white;
+  color: variables.$accent-light;
   float: right;
 }
 
-#marker_location_text {
-  text-align: center;
-  font-weight: bolder;
-  padding: 1em;
-  margin-top: 1em;
-  background-color: #005cbf;
-  border: 0.5em;
+#location-name {
+  color: variables.$accent-color;
+  float: left;
+  font-size: xx-large;
+  margin-bottom: .5em;
 }
+
+#article-thumbnail {
+  float: left;
+  width: calc((100vh - #{variables.$footer-height}) / 4);
+  height: calc((100vh - #{variables.$footer-height}) / 4);
+  padding: 2mm;
+  object-fit: cover;
+  vertical-align: center;
+  border-radius: 1em;
+}
+
+#article-container {
+  width: 100%;
+  //border: thin solid lightgray;
+  padding: 0.15em;
+  min-height: calc((100vh - #{variables.$footer-height}) / 4);
+  align-self: center;
+  margin-bottom: 2em;
+  border-radius: .5em;
+  pointer-events: none;
+  word-wrap: break-word;
+}
+
+#article-title {
+  color: #1A77E9;
+  font-size: 18px;
+}
+#article-summary {
+  color: variables.$accent-darker;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#article-publishing-info {
+  color: black;
+  font-size: 12px;
+}
+
+
