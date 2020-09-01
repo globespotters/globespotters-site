@@ -1,0 +1,6 @@
+@use '../../../variables';
+@import '../static-pages';
+
+#container {
+    @include static-page-container;
+}
