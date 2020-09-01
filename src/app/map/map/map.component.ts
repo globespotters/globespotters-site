@@ -3,7 +3,7 @@ import { environment } from '../../../environments/environment';
 import * as mapboxgl from 'mapbox-gl';
 import { TimelineService } from '../../core/timeline.service';
 
-export const initial_LngLat = new mapboxgl.LngLat(-123.9749, 40.7736);
+export const initialLngLat = new mapboxgl.LngLat(-123.9749, 40.7736);
 
 @Component({
   selector: 'app-map',
@@ -23,13 +23,13 @@ export class MapComponent implements OnInit {
       container: 'map',
       style: this.STYLE_LIGHT,
       zoom: 13,
-      center: [ initial_LngLat.lng, initial_LngLat.lat ]
+      center: [ initialLngLat.lng, initialLngLat.lat ]
     });
 
     this.map.addControl(new mapboxgl.NavigationControl());
 
     let marker = new mapboxgl.Marker({ color: '#FA8072', draggable: true })
-      .setLngLat([ initial_LngLat.lng, initial_LngLat.lat ])
+      .setLngLat([ initialLngLat.lng, initialLngLat.lat ])
       .addTo(this.map);
 
     // Marker on-click functionality
