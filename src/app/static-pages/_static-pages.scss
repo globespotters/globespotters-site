@@ -1,4 +1,5 @@
 @mixin static-page-container {
     min-height: calc(100vh - #{variables.$footer-height});
     width: 100%;
+    padding: 10vh; //e.g.
 }
