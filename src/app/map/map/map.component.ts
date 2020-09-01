@@ -1,10 +1,18 @@
+// External
 import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { environment } from '../../../environments/environment';
 import * as mapboxgl from 'mapbox-gl';
-import { TimelineService } from '../../core/timeline.service';
-import { TutorialComponent } from '../tutorial/tutorial.component';
+
+// Constants and Environment Variables
+import { environment } from '../../../environments/environment';
 import { initialLngLat } from './map.constants';
+
+// Components
+import { TutorialComponent } from '../tutorial/tutorial.component';
+
+// Services
+import { TimelineService } from '../../core/timeline.service';
+
 
 @Component({
   selector: 'app-map',
