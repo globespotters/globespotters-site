@@ -11,6 +11,7 @@
   padding: 1em;
   transition: transform 0.3s ease-in-out;
   overflow: auto;
+  transform: translateX(-100%);
 }
 
 #timeline-close-btn {
