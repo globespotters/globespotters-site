@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import * as mapboxgl from 'mapbox-gl';
 import { TimelineService } from '../../core/timeline.service';
-
-export const initialLngLat = new mapboxgl.LngLat(-123.9749, 40.7736);
+import { initialLngLat } from './map.constants';
 
 @Component({
   selector: 'app-map',

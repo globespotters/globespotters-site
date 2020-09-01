@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { initialLngLat } from '../map/map/map.component';
+import { initialLngLat } from '../map/map/map.constants';
 import { LngLat } from 'mapbox-gl';
 
 @Injectable({
