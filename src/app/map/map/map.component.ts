@@ -15,7 +15,7 @@ export class MapComponent implements OnInit {
   public map!: mapboxgl.Map;
   public STYLE_LIGHT: string = 'mapbox://styles/guyinfridge/ckee54njf0kqu19mna1jgz8z1';
   public STYLE_DARK: string = 'mapbox://styles/guyinfridge/ckedd8l2n1n4c19mlyapazlqu';
-  bsModalRef!: BsModalRef;
+  private bsModalRef!: BsModalRef;
 
   constructor(public timelineService: TimelineService, private modalService: BsModalService) { }
 
