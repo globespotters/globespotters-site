@@ -28,8 +28,9 @@ export class MapComponent implements OnInit {
   constructor(public timelineService: TimelineService, private modalService: BsModalService) { }
 
   ngOnInit(): void {
-    this.bsModalRef = this.modalService.show(TutorialComponent)
+    this.bsModalRef = this.modalService.show(TutorialComponent) // show tutorial modal
 
+    // Initialize mapbox map with light style
     this.map = new mapboxgl.Map({
       accessToken: environment.mapbox.accessToken,
       container: 'map',
@@ -38,8 +39,10 @@ export class MapComponent implements OnInit {
       center: [ initialLngLat.lng, initialLngLat.lat ]
     });
 
+    // Add navigation control buttons to map
     this.map.addControl(new mapboxgl.NavigationControl());
 
+    // Initialize marker on map
     let marker = new mapboxgl.Marker({ color: '#FA8072', draggable: true })
       .setLngLat([ initialLngLat.lng, initialLngLat.lat ])
       .addTo(this.map);
@@ -49,6 +52,7 @@ export class MapComponent implements OnInit {
       this.timelineService.toggleTimeline();
     });
 
+    // Marker on-drag-end functionality
     marker.on('dragend', () => this.timelineService.setMarkerLngLat(marker.getLngLat()));
 
   }
