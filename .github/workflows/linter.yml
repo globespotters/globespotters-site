@@ -1,0 +1,40 @@
+name: Linters
+
+on: [push, pull_request]
+
+env:
+  node-version: 14.x
+
+jobs:
+  functions-lint:
+    name: Cloud Functions
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./functions
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ env.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.node-version }}
+    - name: Install dependencies
+      run: npm ci
+    - name: Run linter
+      run: npm run lint
+      
+  website-lint:
+    name: Website
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ env.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ env.node-version }}
+    - name: Install dependencies
+      run: npm ci
+    - name: Run linter
+      run: npm run lint
