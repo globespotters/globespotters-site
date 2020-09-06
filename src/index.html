@@ -1,24 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>GlobespottersSite</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
+  <head>
+    <meta charset="utf-8" />
+    <title>GlobespottersSite</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root></app-root>
 
-  <!--suppress JSUnresolvedVariable (to remove error on 'documentMode') -->
-  <script>
-    // Alert IE users that our website is not compatible. documentMode seems to give WebStorm an error despite it working
-    let isIE = !!document.documentMode;
+    <!--suppress JSUnresolvedVariable (to remove error on 'documentMode') -->
+    <script>
+      // Alert IE users that our website is not compatible. documentMode seems to give WebStorm an error despite it working
+      let isIE = !!document.documentMode;
 
-    if (isIE) {
-      document.body.innerHTML = "We're sorry, but Globespotters is not supported on Internet Explorer. Please use a " +
-              "more modern browser such as Chrome, Firefox, or Edge.";
-    }
-  </script>
-</body>
+      if (isIE) {
+        document.body.innerHTML =
+          "We're sorry, but Globespotters is not supported on Internet Explorer. Please use a " +
+          "more modern browser such as Chrome, Firefox, or Edge.";
+      }
+    </script>
+  </body>
 </html>

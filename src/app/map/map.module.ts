@@ -4,12 +4,8 @@ import { MapComponent } from './map/map.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TutorialComponent } from './tutorial/tutorial.component';
 
-
-
 @NgModule({
   declarations: [MapComponent, TimelineComponent, TutorialComponent],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class MapModule { }
+export class MapModule {}

@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-tutorial',
   templateUrl: './tutorial.component.html',
-  styleUrls: ['./tutorial.component.scss']
+  styleUrls: ['./tutorial.component.scss'],
 })
 export class TutorialComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

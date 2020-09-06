@@ -10,18 +10,16 @@ import { MapModule } from './map/map.module';
 import { StaticPagesModule } from './static-pages/static-pages.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     CoreModule,
     MapModule,
     StaticPagesModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
